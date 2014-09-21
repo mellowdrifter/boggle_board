@@ -1,32 +1,26 @@
 #!/usr/bin/python
 
-'''
- CUBES:
- ======
- New Version | Old Version
- AAEEGN      | AACIOT
- ELRTTY      | AHMORS
- AOOTTW      | EGKLUY
- ABBJOO      | ABILTY
- EHRTVW      | ACDEMP
- CIMOTV      | EGINTV
- DISTTY      | GILRUW
- EIOSST      | ELPSTU
- DELRVY      | DENOSW
- ACHOPS      | ACELRS
- HIMNQU      | ABJMOQ
- EEINSU      | EEFHIY
- EEGHNW      | EHINPS
- AFFKPS      | DKNOTU
- HLNNRZ      | ADENVZ
- DEILRX      | BIFORX
-'''
-
 import random
+
+class colors:
+    def __init__(self):
+        self.green = "\033[92m"
+        self.blue = "\033[94m"
+        self.bold = "\033[1m"
+        self.yellow = "\033[93m"
+        self.red = "\033[91m"
+        self.end = "\033[0m"
+ga = colors()
 
 game_type_new=''
 letters=[]
 boggle_letters=[]
+
+def printBoard(x):
+    for i in range(0,16):
+        print ga.green+boggle_letters[i]+ga.end+"  ",
+        if i==3 or i==7 or i==11:
+            print ga.red+"|\n"+ga.end
 
 if game_type_new:
     squares=["AAEEGN","ELRTTY","AOOTTW","ABBJOO","EHRTVW","CIMOTV","DISTTY","EIOSST","DELRVY","ACHOPS","HIMNQU","EEINSU","EEGHNW","AFFKPS","HLNNRZ","DEILRX"]
@@ -43,9 +37,6 @@ while len(letters)>0:
     letters.pop(choice)
 
 print "\nHere is your board:\n"
-for i in range(0,16):
-    print boggle_letters[i]+"  ",
-    if i==3 or i==7 or i==11:
-        print"\n"
+printBoard(boggle_letters)
 
 
