@@ -19,19 +19,31 @@ def printBoard(x):
     edge=ga.red+"+-------+-------+-------+-------+"+ga.end
     print edge
     for i in range(0,4):
-        print ga.red+"|   "+ga.end+""+ga.green+boggle_letters[i]+ga.end+"  ",
+        if "Q" in boggle_letters[i]:
+           print ga.red+"|   "+ga.end+""+ga.green+boggle_letters[i]+"u"+ga.end+" ",
+        else:
+            print ga.red+"|   "+ga.end+""+ga.green+boggle_letters[i]+ga.end+"  ",
     print ga.red+"|"+ga.end
     print edge
     for i in range(4,8):
-        print ga.red+"|   "+ga.end+""+ga.green+boggle_letters[i]+ga.end+"  ",
+        if "Q" in boggle_letters[i]:
+            print ga.red+"|   "+ga.end+""+ga.green+boggle_letters[i]+"u"+ga.end+" ",
+        else:
+            print ga.red+"|   "+ga.end+""+ga.green+boggle_letters[i]+ga.end+"  ",
     print ga.red+"|"+ga.end
     print edge
     for i in range(8,12):
-        print ga.red+"|   "+ga.end+""+ga.green+boggle_letters[i]+ga.end+"  ",
+        if "Q" in boggle_letters[i]:
+            print ga.red+"|   "+ga.end+""+ga.green+boggle_letters[i]+"u"+ga.end+" ",
+        else:
+            print ga.red+"|   "+ga.end+""+ga.green+boggle_letters[i]+ga.end+"  ",
     print ga.red+"|"+ga.end
     print edge
     for i in range(12,16):
-        print ga.red+"|   "+ga.end+""+ga.green+boggle_letters[i]+ga.end+"  ",
+        if "Q" in boggle_letters[i]:
+            print ga.red+"|   "+ga.end+""+ga.green+boggle_letters[i]+"u"+ga.end+" ",
+        else:
+            print ga.red+"|   "+ga.end+""+ga.green+boggle_letters[i]+ga.end+"  ",
     print ga.red+"|"+ga.end
     print edge
 
@@ -58,7 +70,7 @@ def timer(x):
             sys.stdout.flush()
             time.sleep(2)
         print"\n"
-    print"Time's up! Put down your pens!"
+    print"\n\n\n\n\n\n\n\nTime's up! Put down your pens!\a"
 
 if __name__ == "__main__":
     print """
